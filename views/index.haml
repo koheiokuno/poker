@@ -1,0 +1,26 @@
+!!! 5
+%html
+  %head
+    %title= "ポーカー"
+    
+    %link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css')
+  %body{class: "container"}
+    %section
+      %h1 ポーカー
+    %section
+      %article
+        %form{action: "/judge",method: :post}
+          カード情報
+          %input{type: :text,name: 'cards'}
+          %input{type: :submit}
+    -if @judgeret
+      %article
+        %h2 判定結果
+        %div{class: "row"} 
+          %div{class: "three column"}  入力したカード情報
+          %div{class: "six column"}= @cards
+        %div{class: "row"} 
+          %div{class: "three column"} 成立した役
+          %div{class: "six column"}= @judgeret['name']
+          
+

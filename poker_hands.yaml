@@ -1,0 +1,55 @@
+- 
+  key: straight_flush
+  name: "ストレートフラッシュ"
+  condition:
+    is_flush: true
+    is_straight: true
+  level: 10
+- 
+  key: four_of_a_kind
+  name: "フォー・オブ・ア・カインド"
+  condition:
+    count_pair: "4"
+  level: 9
+- 
+  key: full_house
+  name: "フルハウス"
+  condition:
+    count_pair: "3,2"
+  level: 8
+- 
+  key: flush
+  name: "フラッシュ"
+  condition:
+    is_flush: true
+  level: 7
+- 
+  key: straight
+  name: "ストレート"
+  condition:
+    is_straight: true
+  level: 6
+- 
+  key: three_of_a_kind
+  name: "スリー・オブ・ア・カインド"
+  condition:
+    count_pair: "3"
+  level: 5
+- 
+  key: two_pair
+  name: "ツーペア"
+  condition:
+    count_pair: "2,2"
+  level: 4
+- 
+  key: one_pair
+  name: "ワンペア"
+  condition:
+    count_pair: "2"
+  level: 3
+- 
+  key: high_card
+  name: "ハイカード"
+  condition:
+    count_pair: "1"
+  level: 0
